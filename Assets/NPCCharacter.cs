@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCCharacter : MonoBehaviour {
 
     public GameObject questPanel;
+    public GameObject interactText;
     private bool tabActive = false;
 
 	// Use this for initialization
@@ -15,6 +16,7 @@ public class NPCCharacter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Tab)) {
+            interactText.SetActive(false);
             tabActive = !tabActive;
             questPanel.SetActive(tabActive);
         }
