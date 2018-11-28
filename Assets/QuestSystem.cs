@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestSystem : MonoBehaviour {
     public GameObject interactText;
+    public bool canInteract;
 	// Use this for initialization
 	void Start () {
         interactText.SetActive(false);
@@ -16,11 +17,13 @@ public class QuestSystem : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
+        canInteract = true;
         interactText.SetActive(true);
     }
 
     public void OnTriggerExit(Collider other)
     {
+        canInteract = false;
         interactText.SetActive(false);
     }
 }

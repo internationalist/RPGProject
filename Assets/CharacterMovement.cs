@@ -19,6 +19,7 @@ public class CharacterMovement : MonoBehaviour {
 
     public float turnSpeed = 1.0f;
     private float turnEndAngle = 0;
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
