@@ -43,6 +43,12 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (Input.GetMouseButtonDown(0)) {
+            anim.SetBool("hasRightMouse", true);
+        } else
+        {
+            anim.SetBool("hasRightMouse", false);
+        }
         //only allow to run once stamina has built up.
         AllowRunWhenStaminaFill();
         //Set character to start sprinting if left shift is pressed while moving, if stamina allows. (Check animator).
